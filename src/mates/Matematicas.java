@@ -2,11 +2,18 @@ package mates;
 
 import java.util.Random;
 
+/**
+ * La clase Matematicas proporciona métodos para cálculos matemáticos.
+ */
+
 public class Matematicas {
 
     /**
      * Genera una aproximación al número pi mediante el método de Montecarlo.
      * El parámetro `pasos` indica el número de puntos generados.
+     *
+     * @param pasos El número de puntos generados.
+     * @return Una aproximación del valor de pi.
      */
     public static double generarNumeroPiIterativo(long pasos) {
         long dentroCirculo = 0;
@@ -19,7 +26,7 @@ public class Matematicas {
             // Calcula la distancia desde el punto (x, y) al origen (0, 0)
             double distanciaAlOrigen = Math.sqrt(x * x + y * y);
 
-            // Verifica si el punto está dentro del círculo unitario (radio 1)
+            // Verifica si el punto está dentro del círculo unitario de radio 1
             if (distanciaAlOrigen <= 1) {
                 dentroCirculo++;
             }
@@ -34,12 +41,6 @@ public class Matematicas {
 
         // Pi es igual a 4 veces la probabilidad de un punto de estar dentro del círculo.
         return 4 * probabilidadDentroCirculo;
-    }
-
-    public static void main(String[] args) {
-        long pasos = 1000000; // Cambia este valor según la precisión deseada
-        double piAproximado = generarNumeroPiIterativo(pasos);
-        System.out.println("Aproximación de Pi: " + piAproximado);
     }
 }
 

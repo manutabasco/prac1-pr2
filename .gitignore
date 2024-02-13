@@ -27,3 +27,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+#Intellij idea
+.idea
+*.iml
+html
+*.swp
+
+# Compiled class file
+*.class
