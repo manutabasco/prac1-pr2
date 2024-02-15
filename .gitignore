@@ -29,7 +29,7 @@ bin/
 .DS_Store
 
 #Intellij idea
-.idea
+*.idea
 *.iml
 html
 *.swp
