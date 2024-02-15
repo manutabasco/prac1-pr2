@@ -23,8 +23,15 @@
 hs_err_pid*
 replay_pid*
 
-#Intellij idea
-.idea
+# Intellij idea
 *.iml
 html
 *.swp
+
+# Hidden files
+
+.*
+
+# Exceting .gitignore
+
+!/.gitignore
